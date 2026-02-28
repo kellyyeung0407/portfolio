@@ -1,0 +1,43 @@
+backend:
+  name: git-gateway
+
+media_folder: "content/artworks/images"
+public_folder: "/images"
+
+collections:
+  - name: artworks
+    label: Artworks
+    label_singular: Artwork
+    folder: "content/artworks"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Date, name: date, widget: date }
+      - { label: Image, name: image, widget: image }
+      - { label: Body, name: body, widget: markdown }
+  - name: pages
+    label: Pages
+    label_singular: Page
+    files:
+      - label: Home
+        name: home
+        file: "content/pages/home.md"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Hero, name: hero, widget: string }
+          - { label: Tagline, name: tagline, widget: string }
+          - { label: Body, name: body, widget: markdown }
+      - label: Resume
+        name: resume
+        file: "content/pages/resume.md"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+      - label: Contact
+        name: contact
+        file: "content/pages/contact.md"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }

@@ -1,0 +1,10 @@
+---
+layout: base
+---
+<section class="hero" aria-label="Intro">
+  <h1>{{ title || 'Home' }}</h1>
+  {% if hero %}<p class="tagline">{{ hero }}</p>{% endif %}
+  {% if tagline %}<p class="tagline">{{ tagline }}</p>{% endif %}
+  <a href="/resume/" class="btn">View Resume</a>
+</section>
+{{ content | safe }}

@@ -1,0 +1,15 @@
+{
+  "name": "opencode-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
+}

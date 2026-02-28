@@ -1,0 +1,5 @@
+<article class="card">
+  <a href="/gallery/{{ slug }}/index.html"><img src="{{ image }}" alt="{{ title }}"/></a>
+  <h3>{{ title }}</h3>
+  <p>{{ body | strip_html | truncate(120) }}</p>
+</article>
